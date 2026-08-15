@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubs &amp; Programs | Tech Together</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .clubs-hero {
+            padding: 140px 0 60px;
+            text-align: center;
+        }
+
+        .clubs-hero .section-title {
+            margin-bottom: 16px;
+        }
+
+        .clubs-hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .clubs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+            padding-bottom: 100px;
+        }
+
+        .club-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 36px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+
+        .club-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(244, 154, 205, 0.35);
+        }
+
+        .club-card .card-glow {
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background: radial-gradient(circle at 50% 0%, rgba(244,154,205,0.1), transparent 70%);
+            pointer-events: none;
+        }
+
+        .club-card:hover .card-glow {
+            opacity: 1;
+        }
+
+        .club-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .club-icon.pink {
+            background: rgba(244, 154, 205, 0.12);
+            color: var(--primary-pink);
+        }
+
+        .club-icon.lavender {
+            background: rgba(200, 141, 255, 0.12);
+            color: var(--secondary-lavender);
+        }
+
+        .club-tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .club-tag.pink {
+            background: rgba(244, 154, 205, 0.1);
+            color: var(--primary-pink);
+            border: 1px solid rgba(244, 154, 205, 0.2);
+        }
+
+        .club-tag.lavender {
+            background: rgba(200, 141, 255, 0.1);
+            color: var(--secondary-lavender);
+            border: 1px solid rgba(200, 141, 255, 0.2);
+        }
+
+        .club-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-white);
+            margin: 0;
+        }
+
+        .club-card p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.65;
+            flex: 1;
+        }
+
+        .club-meta {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .club-meta li {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .club-meta li i {
+            color: var(--primary-pink);
+            width: 14px;
+            text-align: center;
+        }
+
+        .club-card-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 4px;
+        }
+
+        .club-btn-register {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            background: linear-gradient(135deg, var(--primary-pink), var(--secondary-lavender));
+            color: #1a0a2e;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .club-btn-register:hover {
+            opacity: 0.88;
+            transform: translateY(-1px);
+        }
+
+        .club-btn-visit {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            background: transparent;
+            color: var(--text-white);
+            border: 1px solid var(--glass-border);
+            transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        }
+
+        .club-btn-visit:hover {
+            border-color: rgba(200, 141, 255, 0.5);
+            color: var(--secondary-lavender);
+            transform: translateY(-1px);
+        }
+
+        /* "Coming Soon" state for clubs without a site yet */
+        .club-btn-visit.disabled {
+            opacity: 0.4;
+            pointer-events: none;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-tech">tech</span><span class="logo-together">together</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#mission" class="nav-item">Mission</a></li>
+                <li><a href="index.html#about" class="nav-item">About Us</a></li>
+                <li><a href="index.html#upcoming" class="nav-item">Upcoming Events</a></li>
+                <li><a href="index.html#past-events" class="nav-item">Past Events</a></li>
+                <li><a href="members.html" class="nav-item">Our Team</a></li>
+                <li><a href="clubs.html" class="nav-item" aria-current="page">Clubs &amp; Programs</a></li>
+                <li><a href="index.html#get-involved" class="nav-btn">Get Involved</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="clubs-hero">
+            <h1 class="section-title">Clubs &amp; Programs</h1>
+            <p>Explore all the ways to get involved with Tech Together — from app development to rocketry to competitive CS.</p>
+        </div>
+
+        <div class="clubs-grid">
+
+            <!-- Girls Tech -->
+            <div class="club-card">
+                <div class="card-glow"></div>
+                <div class="club-icon pink"><i class="fas fa-mobile-alt"></i></div>
+                <span class="club-tag pink">HerSpark</span>
+                <h3>Girls Tech &amp; Technovation</h3>
+                <p>Design, code, and launch a mobile app to solve real-world problems. Teams submit their projects to the international Technovation Challenge — competing with students from around the world.</p>
+                <ul class="club-meta">
+                    <li><i class="fas fa-graduation-cap"></i> Girls ages 8–15</li>
+                    <li><i class="fas fa-calendar-alt"></i> Sept '26 – April '27</li>
+                    <li><i class="fas fa-desktop"></i> Online &amp; In-person</li>
+                </ul>
+                <div class="club-card-actions">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPjcP0x4qNwXBXOPICYOBDx2aWglz-p1E5i9d4YgXIDTaJ4Q/viewform"
+                       target="_blank" class="club-btn-register">
+                        Register <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="girlsTech.html" class="club-btn-visit">
+                        Visit Site <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3D Printing -->
+            <div class="club-card">
+                <div class="card-glow"></div>
+                <div class="club-icon lavender"><i class="fas fa-cube"></i></div>
+                <span class="club-tag lavender">Maker</span>
+                <h3>3D Printing Club</h3>
+                <p>Learn CAD design and bring your ideas to life with 3D printing. Work on real projects from concept sketches to physical prototypes — no prior experience needed.</p>
+                <ul class="club-meta">
+                    <li><i class="fas fa-graduation-cap"></i> Grades 7–12</li>
+                    <li><i class="fas fa-map-marker-alt"></i> In-person</li>
+                    <li><i class="fas fa-calendar-alt"></i> Seasonal</li>
+                </ul>
+                <div class="club-card-actions">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmElGPJjkM2uXJtzMj5qjNfLxNtGURdolI7BDbFbrmzxqRbw/viewform"
+                       target="_blank" class="club-btn-register">
+                        Register <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <span class="club-btn-visit disabled">
+                        Visit Site <i class="fas fa-external-link-alt"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- ACSL -->
+            <div class="club-card">
+                <div class="card-glow"></div>
+                <div class="club-icon pink"><i class="fas fa-laptop-code"></i></div>
+                <span class="club-tag pink">ACSL</span>
+                <h3>ACSL Club</h3>
+                <p>Compete in the American Computer Science League's Junior and Senior divisions. Sharpen your algorithms, data structures, and competitive programming skills with team coaching.</p>
+                <ul class="club-meta">
+                    <li><i class="fas fa-graduation-cap"></i> Grades 7–12</li>
+                    <li><i class="fas fa-calendar-alt"></i> Seasonal</li>
+                    <li><i class="fas fa-trophy"></i> Junior &amp; Senior League</li>
+                </ul>
+                <div class="club-card-actions">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSegAQytbl2MMEGlR-WapUMk6I6lDe-tsKeCJoceJS2TrHHFzQ/viewform"
+                       target="_blank" class="club-btn-register">
+                        Register <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <span class="club-btn-visit disabled">
+                        Visit Site <i class="fas fa-external-link-alt"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Rocketry -->
+            <div class="club-card">
+                <div class="card-glow"></div>
+                <div class="club-icon lavender"><i class="fas fa-rocket"></i></div>
+                <span class="club-tag lavender">Rocketry</span>
+                <h3>Rocketry Club</h3>
+                <p>Design, build, and launch model rockets. Explore aerodynamics, propulsion, and engineering through hands-on collaborative projects that actually fly.</p>
+                <ul class="club-meta">
+                    <li><i class="fas fa-graduation-cap"></i> Grades 7–12</li>
+                    <li><i class="fas fa-map-marker-alt"></i> In-person</li>
+                    <li><i class="fas fa-calendar-alt"></i> Seasonal</li>
+                </ul>
+                <div class="club-card-actions">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwULRgSS5kdj_Uvz4vcaRLrQtrrEoa6EPxh94gF9k5fkU-ww/viewform"
+                       target="_blank" class="club-btn-register">
+                        Register <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <span class="club-btn-visit disabled">
+                        Visit Site <i class="fas fa-external-link-alt"></i>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="nav-logo">
+                    <span class="logo-tech">tech</span><span class="logo-together">together</span>
+                </div>
+                <p>Empowering the next generation through computing and AI.</p>
+            </div>
+            <div class="footer-socials">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/groups/455646047163082" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/groups/13184021/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:dastur.parinaz@gmail.com" aria-label="Email"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2026 Tech Together. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

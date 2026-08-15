@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girls Tech | Tech Together</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            /* Deeper violet background to subtly differentiate from standard site */
+            --bg-color: #110e1b;
+            --font-heading: 'DM Sans', sans-serif;
+
+            /* Sub-brand colors */
+            --gt-pink: #e056fd;
+            --gt-purple: #be2edd;
+            --gt-gradient: linear-gradient(135deg, #ff79c6 0%, #be2edd 100%);
+            --gt-glow: rgba(224, 86, 253, 0.15);
+        }
+
+        /* Subtle background glow effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -10%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(224, 86, 253, 0.12) 0%, rgba(0,0,0,0) 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Sub-brand navbar badge */
+        .gt-badge {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: var(--gt-gradient);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-left: 8px;
+            vertical-align: middle;
+            box-shadow: 0 0 12px rgba(224, 86, 253, 0.4);
+        }
+
+        /* Distinct section title styling */
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 3px;
+            background: var(--gt-gradient);
+            margin: 8px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Custom hero banner style */
+        .hero-gt {
+            background: linear-gradient(180deg, rgba(224, 86, 253, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+            border-radius: 24px;
+            padding: 40px 20px;
+            border: 1px solid rgba(224, 86, 253, 0.15);
+            box-shadow: 0 10px 30px var(--gt-glow);
+        }
+
+        /* Glass card sub-brand accent */
+        .glass-card {
+            border-color: rgba(224, 86, 253, 0.12) !important;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(224, 86, 253, 0.4) !important;
+            transform: translateY(-4px);
+        }
+
+        /* Custom badge styling */
+        .badge-pink {
+            background: rgba(224, 86, 253, 0.15) !important;
+            color: #ff9ff3 !important;
+            border: 1px solid rgba(224, 86, 253, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-tech">tech</span><span class="logo-together">together</span>
+                <span class="gt-badge">Girls Tech</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#mission" class="nav-item">Mission</a></li>
+                <li><a href="index.html#about" class="nav-item">About Us</a></li>
+                <li><a href="index.html#upcoming" class="nav-item">Upcoming Events</a></li>
+                <li><a href="index.html#past-events" class="nav-item">Past Events</a></li>
+                <li><a href="members.html" class="nav-item">Our Team</a></li>
+                <li><a href="clubs.html" class="nav-item">Clubs &amp; Programs</a></li>
+                <li><a href="index.html#get-involved" class="nav-btn">Get Involved</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div style="padding-top: 120px;"></div>
+
+    <section class="container">
+        <div class="hero-gt" style="text-align: center;">
+            <h1 class="section-title">Learn. Build. Change the World.</h1>
+
+            <p class="mission-lead" style="margin-top: 20px;">
+                Tech Together's Girls Tech program teaches girls coding,
+                entrepreneurship, and teamwork while they create an app solving
+                a real-world problem. At the end of the program, the girls will
+                submit their projects to the international Technovation Challenge.
+            </p>
+
+            <div style="margin-top: 30px;">
+                <a href="#join" class="btn btn-primary">Join Our Program</a>
+                &nbsp;
+                <a href="#learn" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="info" style="margin-top: 60px;">
+        <div style="text-align: center;">
+            <h2 class="section-title">Program Information</h2>
+        </div>
+
+        <div class="events-grid" style="margin-top: 40px;">
+            <div class="glass-card">
+                <div class="card-glow"></div>
+                <h3>👩 Who Can Join?</h3>
+                <p class="event-desc">
+                    Open to girls ages 8–15. No prior coding experience is required!
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <div class="card-glow"></div>
+                <h3>🗓 Program Schedule</h3>
+                <p class="event-desc">
+                    Weekly meetings from September '26 – April '27
+                    <br><br>
+                    <strong>Meeting Times:</strong> TBD
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <div class="card-glow"></div>
+                <h3>💻 What You'll Need</h3>
+                <p class="event-desc">
+                    Students should have access to a laptop and stable internet connection.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="learn" style="margin-top: 60px;">
+        <div style="text-align: center;">
+            <h2 class="section-title">What You'll Learn</h2>
+        </div>
+
+        <div class="events-grid" style="margin-top: 40px;">
+            <div class="glass-card">
+                <div class="card-glow"></div>
+                <span class="event-tag badge-pink">Coding</span>
+                <p class="event-desc">
+                    Learn HTML, CSS, JavaScript, Thunkable, and MIT App Inventor
+                    and app development through beginner-friendly projects. Girls will
+                    ultimately choose one of these platforms to build their final app.
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <div class="card-glow"></div>
+                <span class="event-tag badge-purple">Critical Thinking</span>
+                <p class="event-desc">
+                    Work with teammates to identify real community challenges,
+                    brainstorm creative solutions, and build user-friendly apps.
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <div class="card-glow"></div>
+                <span class="event-tag badge-pink">Leadership / Entrepreneurship</span>
+                <p class="event-desc">
+                    Develop presentation skills, collaborate with mentors, and
+                    confidently share your project with judges at Technovation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="margin-top: 60px;">
+        <div style="text-align: center;">
+            <h2 class="section-title">Your Journey</h2>
+        </div>
+
+        <div class="timeline" style="margin-top: 40px;">
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <span class="timeline-year">Weeks 1–2</span>
+                    <h3>Brainstorm</h3>
+                    <p>Research community problems and design an innovative app that makes a positive impact.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <span class="timeline-year">Weeks 3–4</span>
+                    <h3>Learn to Code</h3>
+                    <p>Explore programming basics through fun lessons and hands-on coding activities.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <span class="timeline-year">Weeks 5–7</span>
+                    <h3>Build Your App</h3>
+                    <p>Turn your ideas into a working application while receiving feedback from mentors.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <span class="timeline-year">Final Week</span>
+                    <h3>Submit &amp; Celebrate</h3>
+                    <p>Present your finished project and submit it to the international Technovation Challenge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="margin-top: 60px;">
+        <div style="text-align: center;">
+            <h2 class="section-title">Why Join?</h2>
+        </div>
+
+        <div class="events-grid" style="margin-top: 40px;">
+            <div class="glass-card">
+                <div class="card-glow"></div>
+                <h3>💜 Build Confidence</h3>
+                <p class="event-desc">
+                    Gain technical skills while learning in a supportive
+                    environment with mentors and teammates.
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <div class="card-glow"></div>
+                <h3>🌎 Make an Impact</h3>
+                <p class="event-desc">
+                    Design technology that solves meaningful community problems
+                    and creates positive change.
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <div class="card-glow"></div>
+                <h3>🏆 Compete Globally</h3>
+                <p class="event-desc">
+                    Showcase your work by participating in the international
+                    Technovation Challenge alongside students from around the world.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="join" style="margin-top: 60px; margin-bottom: 80px;">
+        <div class="glass-card" style="text-align: center; padding: 50px 30px;">
+            <div class="card-glow"></div>
+            <h2 class="section-title">Ready to Start?</h2>
+
+            <p class="mission-lead" style="margin-top: 20px;">
+                Whether you've never written a line of code or already love
+                programming, Tech Together welcomes girls who are excited to learn,
+                create, and make an impact through technology.
+            </p>
+
+            <div style="margin-top: 30px;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPjcP0x4qNwXBXOPICYOBDx2aWglz-p1E5i9d4YgXIDTaJ4Q/viewform"
+                   class="btn btn-primary" target="_blank">
+                    Join Girls Tech
+                </a>
+                &nbsp;
+                <a href="https://technovationchallenge.org"
+                   target="_blank"
+                   class="btn btn-secondary">
+                    Explore Technovation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="nav-logo">
+                    <span class="logo-tech">tech</span><span class="logo-together">together</span>
+                    <span class="gt-badge">Girls Tech</span>
+                </div>
+                <p>Empowering the next generation through computing and AI.</p>
+            </div>
+            <div class="footer-socials">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/groups/455646047163082" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/groups/13184021/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:dastur.parinaz@gmail.com" aria-label="Email"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2026 Tech Together. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

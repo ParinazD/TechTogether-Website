@@ -104,19 +104,91 @@ document.addEventListener('DOMContentLoaded', () => {
     // 6. Interactive Modals Lightbox Gallery Controller
     const lightbox = document.getElementById('lightbox');
     const lightboxClose = document.querySelector('.lightbox-close');
-    const galleryItems = document.querySelectorAll('.gallery-item');
 
-    galleryItems.forEach(item => {
-        item.addEventListener('click', () => {
-            lightbox.style.display = 'flex';
+    function bindGalleryItems(context) {
+        context.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const src = item.getAttribute('data-src');
+                if (lightbox && src) {
+                    const existing = lightbox.querySelector('img.lightbox-img');
+                    if (existing) existing.remove();
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.alt = item.querySelector('img')?.alt || '';
+                    img.className = 'lightbox-img';
+                    img.style.cssText = 'max-width:90vw; max-height:85vh; border-radius:12px; display:block;';
+                    const placeholder = lightbox.querySelector('.lightbox-placeholder-view');
+                    if (placeholder) placeholder.appendChild(img);
+                    lightbox.style.display = 'flex';
+                }
+            });
+        });
+    }
+
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', () => { lightbox.style.display = 'none'; });
+    }
+    if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) lightbox.style.display = 'none';
+        });
+    }
+
+    // Bind gallery items on initial page load
+    bindGalleryItems(document);
+
+    // 7. Event Detail Modal (popup on timeline card click)
+    const eventModalOverlay = document.getElementById('event-modal-overlay');
+    const eventModalClose = document.getElementById('eventModalClose');
+    const eventModalBody = document.getElementById('eventModalBody');
+
+    function openEventModal(templateId) {
+        const tmpl = document.getElementById(templateId);
+        if (!tmpl || !eventModalBody) return;
+        eventModalBody.innerHTML = '';
+        eventModalBody.appendChild(tmpl.content.cloneNode(true));
+        eventModalOverlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        // Bind gallery items inside the newly inserted modal content
+        bindGalleryItems(eventModalBody);
+        // Focus management for accessibility
+        eventModalClose.focus();
+    }
+
+    function closeEventModal() {
+        eventModalOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.timeline-card-compact').forEach(card => {
+        const modalId = card.getAttribute('data-modal');
+        card.addEventListener('click', () => openEventModal(modalId));
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openEventModal(modalId);
+            }
         });
     });
 
-    lightboxClose.addEventListener('click', () => {
-        lightbox.style.display = 'none';
+    // "Learn More" buttons on event cards
+    document.querySelectorAll('.card-btn-learn').forEach(btn => {
+        const modalId = btn.getAttribute('data-modal');
+        btn.addEventListener('click', () => openEventModal(modalId));
     });
 
-    lightbox.addEventListener('click', (e) => {
-        if(e.target === lightbox) lightbox.style.display = 'none';
+    if (eventModalClose) eventModalClose.addEventListener('click', closeEventModal);
+    if (eventModalOverlay) {
+        eventModalOverlay.addEventListener('click', (e) => {
+            if (e.target === eventModalOverlay) closeEventModal();
+        });
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && eventModalOverlay.classList.contains('open')) {
+            closeEventModal();
+        }
     });
 });

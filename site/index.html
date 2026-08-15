@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Together | Empowering Next-Gen Innovators</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-tech">tech</span><span class="logo-together">together</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#mission" class="nav-item">Mission</a></li>
+                <li><a href="#about" class="nav-item">About Us</a></li>
+                <li><a href="#upcoming" class="nav-item">Upcoming Events</a></li>
+                <li><a href="#past-events" class="nav-item">Past Events</a></li>
+                <li><a href="members.html" class="nav-item">Our Team</a></li>
+                <li><a href="clubs.html" class="nav-item">Clubs &amp; Programs</a></li>
+                <li><a href="#get-involved" class="nav-btn">Get Involved</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero-section">
+        <div class="hero-bg-animate"></div>
+        <div class="particles-container" id="particles"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">TECH TOGETHER</h1>
+            <p class="hero-subtitle">Empowering the Next Generation of Innovators<br><span>Through Computing and Artificial Intelligence</span></p>
+            
+            <div class="hero-cta-group">
+                <a href="#upcoming" class="btn btn-primary">Register for Bootcamp</a>
+                <a href="#upcoming" class="btn btn-secondary">Upcoming Techathon</a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <i class="fas fa-arrow-down-long"></i>
+        </div>
+    </header>
+
+    <section id="mission" class="mission-section scroll-reveal">
+        <div class="mission-bg" aria-hidden="true"></div>
+        <div class="mission-bg-tint" aria-hidden="true"></div>
+        <div class="container">
+            <h2 class="section-title">Our Mission</h2>
+            <p class="mission-lead">Tech Together empowers the next generation of innovators to create positive change through computing and artificial intelligence.</p>
+            
+            <div class="mission-grid">
+                <div class="mission-pill"><i class="fas fa-check-circle"></i> Computing is creative.</div>
+                <div class="mission-pill"><i class="fas fa-check-circle"></i> Anyone can learn to code.</div>
+                <div class="mission-pill"><i class="fas fa-check-circle"></i> AI should be accessible.</div>
+                <div class="mission-pill"><i class="fas fa-check-circle"></i> Technology should solve meaningful problems.</div>
+            </div>
+
+            <div class="illustration-row">
+                <div class="icon-box"><i class="fas fa-globe-americas"></i></div>
+                <div class="icon-box"><i class="fas fa-code"></i></div>
+                <div class="icon-box"><i class="fas fa-desktop"></i></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="about-section scroll-reveal">
+        <div class="container about-layout">
+            <div class="about-left">
+                <div class="collage-container">
+                    <div class="collage-photo photo-top-left">
+                        <img src="Tech3.png" alt="TechTogether logo photo" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="collage-photo photo-top-right">
+                        <img src="./images/Tech52.jpeg" alt="TechTogether team photo" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="collage-photo photo-bottom-center">
+                        <img src="./images/library/Tech23.jpeg" alt="Library Sessions" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+            <div class="about-right">
+                <div class="about-block">
+                    <h2 class="section-title-left">Who We Are</h2>
+                     <P>Tech Together Inc. is a registered 501(c)(3) non-profit organization. Our mission is to empower the next generation of innovators to create positive change through computing and artificial intelligence.</P>
+                     <p>Inspired by a "think globally, act locally" call to action at the UN's Commission on the Status of Women, we sought to create a program to address the gender gap within our computer science community.</p>
+                     <p>Tech Together was founded by Parinaz Dastur and Talia Ye with the goal of sharing our passion for computing with younger girls and inspiring them to pursue their interests in computing. We strive to provide a strong foundation in computer science by introducing computing fundamentals, engaging them with fun and interactive activities, and walking students through programming challenges.</p>
+                     <p>We coached students online to compete in the American Computer Science League (ACSL), co-hosted in-person meetings, and taught Girl Scouts the computing elements needed to fulfill their Coding For Good badges.</p>
+                </div>
+                
+                <div class="about-block">
+                    <h3 class="subsection-title">What Makes Us Different</h3>
+                    <ul class="different-list">
+                        <li><span class="bullet"></span> Project-based learning</li>
+                        <li><span class="bullet"></span> Real AI tools</li>
+                        <li><span class="bullet"></span> Industry mentors</li>
+                        <li><span class="bullet"></span> University partnerships</li>
+                        <li><span class="bullet"></span> Inclusive community</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <section id="upcoming" class="upcoming-section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="events-grid">
+                <div class="event-card glass-card">
+                    <div class="card-glow"></div>
+                    <div class="event-header">
+                        <span class="event-tag badge-pink">Clubs & Programs</span>
+                        <h3>Girls Technovation &amp HerSpark</h3>
+                    </div>
+                    <ul class="event-details">
+                        <li><i class="far fa-calendar-alt"></i> </li>
+                        <li><i class="fas fa-desktop"></i></li>
+                        <li><i class="fas fa-graduation-cap"></i> </li>
+                    </ul>
+                    <p class="event-desc">Design, code, and launch a mobile app to solve real-world problems—working in teams to change the world.</p>
+                    <div class="event-card-actions">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPjcP0x4qNwXBXOPICYOBDx2aWglz-p1E5i9d4YgXIDTaJ4Q/viewform" class="card-btn">Register <i class="fas fa-arrow-right"></i></a>
+                        <button class="card-btn-learn" data-modal="modal-bootcamp" aria-label="Learn more about HerSpark">
+                            <i class="fas fa-info-circle"></i> Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <div class="event-card glass-card">
+                    <div class="card-glow"></div>
+                    <div class="event-header">
+                        <span class="event-tag badge-purple">Clubs & Programs</span>
+                        <h3>3D Printing Club</h3>
+                    </div>
+                    <ul class="event-details">
+                        <li><i class="far fa-calendar-alt"></i></li>
+                        <li><i class="fas fa-map-marker-alt"></i></li>
+                        <li><i class="fas fa-graduation-cap"></i></li>
+                    </ul>
+                    <p class="event-desc">Learn CAD design and bring your ideas to life with 3D printing. Work on real projects from concept sketches to physical prototypes.</p>
+                    <div class="event-card-actions">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmElGPJjkM2uXJtzMj5qjNfLxNtGURdolI7BDbFbrmzxqRbw/viewform" target="_blank" class="card-btn">Register <i class="fas fa-arrow-right"></i></a>
+                        <button class="card-btn-learn" data-modal="modal-techathon2" aria-label="Learn more about 3D Printing Club">
+                            <i class="fas fa-info-circle"></i> Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <div class="event-card glass-card">
+                    <div class="card-glow"></div>
+                    <div class="event-header">
+                        <span class="event-tag badge-pink">Clubs & Programs</span>
+                        <h3>Rocketry Club</h3>
+                    </div>
+                    <ul class="event-details">
+                        <li><i class="far fa-calendar-alt"></i> </li>
+                        <li><i class="fas fa-map-marker-alt"></i></li>
+                        <li><i class="fas fa-graduation-cap"></i></li>
+                    </ul>
+                    <p class="event-desc">Design, build, and launch model rockets. Explore aerodynamics, propulsion, and engineering through hands-on collaborative projects.</p>
+                    <div class="event-card-actions">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwULRgSS5kdj_Uvz4vcaRLrQtrrEoa6EPxh94gF9k5fkU-ww/viewform" target="_blank" class="card-btn">Register <i class="fas fa-arrow-right"></i></a>
+                        <button class="card-btn-learn" data-modal="modal-techathon2" aria-label="Learn more about Rocketry Club">
+                            <i class="fas fa-info-circle"></i> Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <div class="event-card glass-card">
+                    <div class="card-glow"></div>
+                    <div class="event-header">
+                        <span class="event-tag badge-pink">Clubs & Programs</span>
+                        <h3>ACSL Club - Junior and Senior League</h3>
+                    </div>
+                    <ul class="event-details">
+                        <li><i class="far fa-calendar-alt"></i> </li>
+                        <li><i class="fas fa-map-marker-alt"></i></li>
+                        <li><i class="fas fa-graduation-cap"></i></li>
+                    </ul>
+                    <p class="event-desc">Compete in the American Computer Science League's Junior division or Senior Division</p>
+                    <div class="event-card-actions">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSegAQytbl2MMEGlR-WapUMk6I6lDe-tsKeCJoceJS2TrHHFzQ/viewform" target="_blank" class="card-btn">Register <i class="fas fa-arrow-right"></i></a>
+                        <button class="card-btn-learn" data-modal="modal-techathon2" aria-label="Learn more about Rocketry Club">
+                            <i class="fas fa-info-circle"></i> Learn More
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Event Detail Modals -->
+    <div id="event-modal-overlay" class="event-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="event-modal-box">
+            <button class="event-modal-close" id="eventModalClose" aria-label="Close modal">&times;</button>
+            <div class="event-modal-body" id="eventModalBody"></div>
+        </div>
+    </div>
+
+    <section id="past-events" class="past-events-section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">Past Events Timeline</h2>
+            
+            <div class="timeline">
+                
+                <!-- Library Sessions -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card timeline-card-compact" 
+                         role="button" tabindex="0" 
+                         aria-label="Open Library Events details"
+                         data-modal="modal-library">
+                        <span class="timeline-year">Session Series</span>
+                        <h3>Library Sessions</h3>
+                        <div class="stats-container">
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="140">0</span>
+                                <span class="stat-label">Total Students</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="3">0</span>
+                                <span class="stat-label">Sessions</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="5">0</span>
+                                <span class="stat-label">Advanced Focuses</span>
+                            </div>
+                        </div>
+                        <div class="timeline-card-gallery">
+                            <img src="images/library/Tech11.PNG" alt="Library session">
+                            <img src="images/library/Tech2.jpeg" alt="Students at library">
+                            <img src="images/library/Tech25.jpeg" alt="Library activity">
+                        </div>
+                        <span class="timeline-read-more">Click to read more <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!-- Girl Scouts Sessions -->
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card timeline-card-compact"
+                         role="button" tabindex="0"
+                         aria-label="Open Girl Scouts details"
+                         data-modal="modal-girlscouts">
+                        <span class="timeline-year">March 8</span>
+                        <h3>Girl Scouts Sessions</h3>
+                        <div class="stats-container">
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="15">0</span>
+                                <span class="stat-label">Troop Students</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="2">0</span>
+                                <span class="stat-label">Separate Sessions</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="3">0</span>
+                                <span class="stat-label">Badges Earned</span>
+                            </div>
+                        </div>
+                        <div class="timeline-card-gallery">
+                            <img src="./images/girlscouts/Tech8.jpg" alt="Girl Scouts coding">
+                            <img src="./images/girlscouts/Tech19.jpeg" alt="Girl Scouts learning">
+                            <img src="./images/girlscouts/Tech22.jpeg" alt="Girl Scouts activity">
+                        </div>
+                        <span class="timeline-read-more">Click to read more <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!-- International Outreach -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card timeline-card-compact"
+                         role="button" tabindex="0"
+                         aria-label="Open International Outreach details"
+                         data-modal="modal-international">
+                        <span class="timeline-year">Global Initiatives</span>
+                        <h3>International Outreach</h3>
+                        <div class="stats-container">
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="2">0</span>
+                                <span class="stat-label">Non-Profits Linked</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="1">0</span>
+                                <span class="stat-label">International Hub</span>
+                            </div>
+                        </div>
+                        <p class="location-tag"><i class="fas fa-globe-americas"></i> Thumbelina School &bull; Ahmedabad, India</p>
+                        <div class="timeline-card-gallery">
+                            <img src="./images/IOR/Tech4.jpeg" alt="Teaching in India">
+                            <img src="./images/IOR/Tech17.jpeg" alt="AI session India">
+                            <img src="./images/IOR/Tech36.jpeg" alt="Classroom India">
+                        </div>
+                        <span class="timeline-read-more">Click to read more <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!-- First AI Techathon -->
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card timeline-card-compact"
+                         role="button" tabindex="0"
+                         aria-label="Open First AI Techathon details"
+                         data-modal="modal-techathon">
+                        <span class="timeline-year">March 8–9, 2025</span>
+                        <h3>First AI Techathon</h3>
+                        <div class="stats-container">
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="3">0</span>
+                                <span class="stat-label">UNSDGs Covered</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="1">0</span>
+                                <span class="stat-label">Global AI Launch</span>
+                            </div>
+                        </div>
+                        <p class="location-tag"><i class="fas fa-ribbon"></i> Local  Ambassadors &bull; International Teens in AI Partner</p>
+                        <div class="timeline-card-gallery">
+                            <img src="./images/Tech50.jpeg" alt="Techathon teamwork">
+                            <img src="./images/Tech52.jpeg" alt="Techathon presentations">
+                            <img src="./images/Tech55.jpeg" alt="Techathon awards">
+                        </div>
+                        <span class="timeline-read-more">Click to read more <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!-- Google Tour -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card timeline-card-compact"
+                         role="button" tabindex="0"
+                         aria-label="Open Google Tour details"
+                         data-modal="modal-google">
+                        <span class="timeline-year">April-May, 2025</span>
+                        <h3>Tech Together's Google Field Trips</h3>
+                        <div class="stats-container">
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="40">0</span>
+                                <span class="stat-label">Students Attended</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="4">0</span>
+                                <span class="stat-label">Industry Volunteers</span>
+                            </div>
+                        </div>
+                        <p class="location-tag"><i class="fas fa-city"></i>  Google Bayview and Googleplex Campuses</p>
+                        <div class="timeline-card-gallery">
+                            <img src="./images/googleTour/GoogleFieldTrip1.jpg" alt="Google teamwork">
+                            <img src="./images/googleTour/GoogleTour4.jpeg" alt="Google presentations">
+                            <img src="./images/googleTour/GoogleTour3.jpg" alt="Google awards">
+                        </div>
+                        <span class="timeline-read-more">Click to read more <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!--- Summer Girl Scouts Sessions -->
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card timeline-card-compact"
+                         role="button" tabindex="0"
+                         aria-label="Open Summer Girl Scouts Sessions details"
+                         data-modal="modal-GSSummer">
+                        <span class="timeline-year">Girl Scouts Initiatives</span>
+                        <h3>NorCal Girl Scouts Outreach</h3>
+                        <div class="stats-container">
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="4">0</span>
+                                <span class="stat-label">Girl Scouts Grade Levels</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="30">0</span>
+                                <span class="stat-label">Girl Scouts Attendees</span>
+                            </div>
+                        </div>
+                        <p class="location-tag"><i class="fas fa-globe-americas"></i> Girl Scouts of Northern California Headquarters &bull; San Jose, California USA</p>
+                        <div class="timeline-card-gallery">
+                            <img src="./images/GSSummer/GSSummer2.jpeg" alt="Teaching in HQ">
+                            <img src="./images/GSSummer/GSSummer4.jpeg" alt="AI session GS">
+                            <img src="./images/GSSummer/gSSummer1.jpeg" alt="Classroom SJ Girl Scouts HQ">
+                        </div>
+                        <span class="timeline-read-more">Click to read more <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!-- Cultivating Hope Partnership -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card timeline-card-compact"
+                         role="button" tabindex="0"
+                         aria-label="Open Cultivating Hope Partnership details"
+                         data-modal="modal-CultivatingHope">
+                        <span class="timeline-year">June 9, 2025</span>
+                        <h3>Cultivating Hope Partnership</h3>
+                        <div class="stats-container">
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="5">0</span>
+                                <span class="stat-label">Core Topics</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="15">0</span>
+                                <span class="stat-label">High Schoolers and Undergraduates</span>
+                            </div>
+                        </div>
+                        <p class="location-tag"><i class="fas fa-ribbon"></i> Partnership &bull; Cultivating Hope Group from Birmingham, Alabama USA</p>
+                        <div class="timeline-card-gallery">
+                            <img src="./images/CultivatingHope/CultivatingHope1.jpeg" alt="AI Lesson">
+                            <img src="./images/CultivatingHope/CultivatingHope3.jpeg" alt="Presentations">
+                            <img src="./images/CultivatingHope/CultivatingHope2.jpeg" alt="Classroom Topics">
+                        </div>
+                        <span class="timeline-read-more">Click to read more <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!--- AI & Python Bootcamp -->
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card timeline-card-compact"
+                         role="button" tabindex="0"
+                         aria-label="Open AI & Python Bootcamp details"
+                         data-modal="modal-bootcamp">
+                        <span class="timeline-year"July 20-24, 2026</span>
+                        <h3>Agentic AI and Python Bootcamp</h3>
+                        <div class="stats-container">
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="20">0</span>
+                                <span class="stat-label">Attendees</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number" data-target="2">0</span>
+                                <span class="stat-label">International Professor Keynotes</span>
+                            </div>
+                        </div>
+                        <p class="location-tag"><i class="fas fa-desktop"></i> Virutal </p>
+                        <div class="timeline-card-gallery">
+                            <img src="./images/Bootcamp/Bootcamp1.jpeg" alt="Teaching in HQ">
+                            <img src="./images/Bootcamp/bootcamp3.jpeg" alt="AI session GS">
+                        </div>
+                        <span class="timeline-read-more">Click to read more <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Hidden modal content templates -->
+    <template id="modal-library">
+        <h2 id="modal-title">Library Sessions</h2>
+        <span class="modal-year-tag">Session Series</span>
+        <p>Sessions were conducted at the local libraries for an audience of around 50 middle school students per session. In our library sessions, we progressed from fundamental concepts like variables, primitives, and strings to more advanced topics such as data structures, functions, and recursion. We covered a wide range of concepts, including:</p>
+        <ul class="modal-list">
+            <li>Computer Number Systems</li>
+            <li>Stacks vs. Queues</li>
+            <li>Abstraction</li>
+            <li>Binary Search Trees</li>
+            <li>Digital Circuits with Boolean Logic</li>
+        </ul>
+        <p>Students were guided on how to draw circles of evaluation (borrowed from the Bootstrap curriculum) for mathematical expressions, and built prefix/postfix expressions by "walking the expression tree recursively." A local professor followed up with a mini-lecture on recursion and drew parallels from the circles of evaluation to fractal trees.</p>
+        <p>To complement the academic content, we incorporated interactive elements to enhance learning and engagement, including hands-on activities like circuit modeling with micro bits, collaborative work through code segment rearrangement, recursion tracing, and competitive learning through Kahoot! games. Students had a chance to present their unique solutions to challenges, which encouraged all participants to celebrate each other's unique perspectives.</p>
+        <h4 class="modal-gallery-title">Event Gallery</h4>
+        <div class="modal-gallery-grid">
+            <div class="gallery-item" data-src="images/library/Tech11.PNG"><img src="images/library/Tech11.PNG" alt="Library session slide"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="images/library/Tech13.PNG"><img src="images/library/Tech13.PNG" alt="Library session slide"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="images/library/Tech2.jpeg"><img src="images/library/Tech2.jpeg" alt="Students working"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="images/library/Tech25.jpeg"><img src="images/library/Tech25.jpeg" alt="Library activity"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="images/library/Tech24.jpeg"><img src="images/library/Tech24.jpeg" alt="Students collaborating"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="images/library/Tech27.jpeg"><img src="images/library/Tech27.jpeg" alt="Group activity"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="images/library/Tech29.jpeg"><img src="images/library/Tech29.jpeg" alt="Students presenting"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="images/library/Tech33.jpeg"><img src="images/library/Tech33.jpeg" alt="Library coding"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="images/library/Tech10.jpeg"><img src="images/library/Tech10.jpeg" alt="Students engaged"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+        </div>
+    </template>
+
+    <template id="modal-girlscouts">
+        <h2 id="modal-title">Girl Scouts Session</h2>
+        <span class="modal-year-tag">March 8 &mdash; International Women's Day</span>
+        <p>To expand Tech Together's reach, we partnered with select Girl Scouts chapters in our area teaching them the computing elements to earn their Coding for Good badges.</p>
+        <p>On International Women's Day, we piloted a beginner's Python programming session with a 5th-grade Girl Scouts Troop, teaching algorithm design fundamentals while programming fun games in a 4-hour coding session to 15 students where they earned their Coding Basics Badge. The session culminated with an inspiring speech about NASA's Dorothy Vaughan, a computer scientist pioneer. Additionally, we met with the Girl Scouts to teach them the fundamentals of Game Design and App Development to earn two more badges.</p>
+        <h4 class="modal-gallery-title">Event Gallery &amp; Presentation Media</h4>
+        <div class="modal-gallery-grid" style="margin-bottom: 1.5rem;">
+            <div class="gallery-item" data-src="./images/girlscouts/Tech8.jpg"><img src="./images/girlscouts/Tech8.jpg" alt="Girl Scouts coding"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/girlscouts/Tech7.jpg"><img src="./images/girlscouts/Tech7.jpg" alt="Girl Scouts on computers"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/girlscouts/Tech19.jpeg"><img src="./images/girlscouts/Tech19.jpeg" alt="Girl Scouts learning"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/girlscouts/Tech34.jpeg"><img src="./images/girlscouts/Tech34.jpeg" alt="Group activity"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/girlscouts/Tech22.jpeg"><img src="./images/girlscouts/Tech22.jpeg" alt="Presentation"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/girlscouts/TechTogheter21.jpeg"><img src="./images/girlscouts/TechTogheter21.jpeg" alt="Earning badges"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+        </div>
+        <video controls style="width: 100%; border-radius: 12px; display: block;">
+            <source src="./images/girlscouts/TechTogetherInspirational.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </template>
+
+    <template id="modal-international">
+        <h2 id="modal-title">International Outreach</h2>
+        <span class="modal-year-tag"><i class="fas fa-globe-americas"></i> Thumbelina School &bull; Ahmedabad, India</span>
+        <p>As part of my initiative to close the gender gap in technology, I conducted a session on Computer Science and AI in Ahmedabad, India to a group of children from two non-profit organizations. I had partnered with organizations' leaders to host and organize the session. We were graciously offered a school, Thumbelina, to provide us access to classrooms and high-speed internet.</p>
+        <p>I presented and taught about the history of AI, how to write programs, and the workings of large language models. The children learned to distinguish between AI-generated content and real content. Through interactive quizzes and games, the children had an engaging experience while learning valuable AI concepts.</p>
+        <p>I believe that by introducing these topics to young girls, we can inspire them to pursue careers that they want to pursue and contribute to a more diverse and inclusive field.</p>
+        <h4 class="modal-gallery-title">Outreach Gallery</h4>
+        <div class="modal-gallery-grid">
+            <div class="gallery-item" data-src="./images/IOR/Tech4.jpeg"><img src="./images/IOR/Tech4.jpeg" alt="Teaching in Ahmedabad"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/IOR/Tech17.jpeg"><img src="./images/IOR/Tech17.jpeg" alt="Students learning AI"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/IOR/Tech18.jpeg"><img src="./images/IOR/Tech18.jpeg" alt="Interactive quiz"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/IOR/Tech35.jpeg"><img src="./images/IOR/Tech35.jpeg" alt="Classroom activity"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/IOR/Tech36.jpeg"><img src="./images/IOR/Tech36.jpeg" alt="Students engaged"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/IOR/Tech37.jpeg"><img src="./images/IOR/Tech37.jpeg" alt="Group photo"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+        </div>
+    </template>
+
+    <template id="modal-techathon">
+        <h2 id="modal-title">Tech Together's First AI Techathon</h2>
+        <span class="modal-year-tag"><i class="fas fa-ribbon"></i> March 8–9, 2025 &bull; Teens in AI Partner</span>
+        <p>On September 19th, 1995, countries came together at the Fourth World Conference on Women to forge the Beijing Declaration, a collective vision for overcoming the challenges facing millions of women. The countries ultimately identified 12 critical challenges to address, and today The Beijing Declaration remains a significant achievement for gender equality.</p>
+        <p>On March 8th and 9th, 2025, Tech Together played a key role in the Global Hackathon, launched by Teens in AI at the UN AI for Good Summit in 2018. As local ambassadors, we not only provided a platform for innovation, but empowered young women with the tools, education, training, and leadership opportunities to create solutions for three UNSDGs—Gender Equality, Quality Education, and Good Health and Well-being.</p>
+        <p>After this Techathon, the girls became cognizant of the problems faced by women today. For instance, the teams behind <em>Flow Friend</em> and <em>Humenstruate</em> saw the lack of resources and knowledge in women's health as a challenge to overcome. With creativity and determination, they built solutions that will change lives, some teams even looking to patent projects and create businesses.</p>
+        <p>This is the future we are building: a future where girls are not only learning but leading, creating, and inspiring. The strength of their collective efforts will shape the world for generations to come. Together, we are not just dreaming of change — we are making it a reality.</p>
+        
+        <h4 class="modal-gallery-title">Techathon Gallery</h4>
+        <div class="modal-gallery-grid" style="margin-bottom: 1.5rem;">
+            <div class="gallery-item" data-src="./images/Tech50.jpeg"><img src="./images/Tech50.jpeg" alt="Teamwork 1"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/Tech51.jpeg"><img src="./images/Tech51.jpeg" alt="Teamwork 2"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/Tech52.jpeg"><img src="./images/Tech52.jpeg" alt="Presentation"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/Tech53.jpeg"><img src="./images/Tech53.jpeg" alt="Interactive learning"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/Tech54.jpeg"><img src="./images/Tech54.jpeg" alt="Project evaluation"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/Tech55.jpeg"><img src="./images/Tech55.jpeg" alt="Award group photo"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+        </div>
+        <video controls style="width: 100%; border-radius: 12px; display: block; margin-bottom: 1rem;">
+            <source src="./images/Tech56.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span style="font-size: 0.8rem; background: rgba(200,141,255,0.1); color: var(--secondary-lavender); padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(200,141,255,0.2);">Teens in AI Hub Supported</span>
+    </template>
+
+    <template id="modal-google">
+        <h2 id="modal-title">Tech Together's Google Headquarters Tour</h2>
+        <span class="modal-year-tag"><i class="fas fa-ribbon"></i> April–May &bull; Campus Experience</span>
+            
+        <p>Throughout the months of April and May, over 40 students embarked on an inspiring and motivational journey through Google’s iconic Googleplex and Bay View campuses. Supported by Tech Together, this hands-on experience brought technology to life, giving students a firsthand look at innovation at scale.</p>
+        <p>From hearing the captivating stories behind artifacts around the campus to sharing a delicious lunch together, the visit was as fun as it was educational. Our students represented the community with excellence, and their enthusiasm was contagious—with many expressing dreams of returning to work at Google one day!</p>
+
+        <blockquote style="border-left: 4px solid var(--secondary-lavender); margin: 1.5rem 0; padding: 0.8rem 1.2rem; background: rgba(200,141,255,0.05); font-style: italic; border-radius: 0 8px 8px 0;">
+            "From hearing the inspiring stories of all the artifacts around the campus to having a delicious lunch, it was an inspiring, motivational and all around fun trip."
+        </blockquote>
+        
+        <p style="font-weight: 800; font-style:oblique;">We're especially grateful to all of the dedicated tour guides, drivers, and organizers for planning and carpooling arrangements that made this memorable trip possible for our students. Special gratitude to our inspiring tour hosts at Google, who provided a motivating tour and offered to welcome more students next school year!</p>
+            
+        <h4 class="modal-gallery-title">Google Campus Gallery</h4>
+        <div class="modal-gallery-grid" style="margin-bottom: 1.5rem;">
+            <div class="gallery-item" data-src="./images/googleTour/googleTour1.jpg"><img src="./images/googleTour/GoogleFieldTrip1.jpg" alt="Googleplex Campus"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/googleTour/googleTour2.jpg"><img src="./images/googleTour/GoogleTour2.jpg" alt="Google Bay View Campus"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/googleTour/googleTour3.jpg"><img src="./images/googleTour/GoogleTour3.jpg" alt="Campus Guided Tour"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/googleTour/googleTour4.jpg"><img src="./images/googleTour/GoogleTour5.jpeg" alt="Student Exploration"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/googleTour/googleTour5.jpg"><img src="./images/googleTour/GoogleTour4.jpeg" alt="Group Lunch at Google"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/googleTour/googleTour5.jpg"><img src="./images/googleTour/GoogleTour6.JPG" alt="Group Lunch at Google"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/googleTour/googleTour6.jpg"><img src="./images/googleTour/GoogleTour7.HEIC" alt="Campus Artifacts & History"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/googleTour/googleTour7.jpg"><img src="./images/googleTour/GoogleTour8.jpeg" alt="Interactive Experience"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+        </div>
+            
+        <video controls style="width: 100%; border-radius: 12px; display: block; margin-bottom: 1rem;">
+            <source src="./images/googleTour/googleHighlight.MOV" type="video/MOV">
+            Your browser does not support the video tag.
+        </video>
+        
+        <span style="font-size: 0.8rem; background: rgba(200,141,255,0.1); color: var(--secondary-lavender); padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(200,141,255,0.2);">Tech Together Event Supported</span>
+    </template>
+
+    <template id="modal-GSSummer">
+        <h2 id="modal-title">NorCal Girl Scouts Outreach</h2>
+        <span class="modal-year-tag"><i class="fas fa-globe-americas"></i> Girl Scouts of Northern California Headquarters &bull; San Jose, California USA</span>
+        <p>I was invited by Girl Scouts to lead a hands-on technology and web development presentation for a multi-level group of 30 Juniors, Cadettes, Seniors, and Ambassadors.</p>
+        <p>During this workshop, I guided students through the entire lifecycle of building a web project, from initial concept to technical execution:</p>
+        <p>Core Concepts: Taught foundational artificial intelligence concepts, including vectors, embeddings, and tokens</p>
+        <p>Technical Implementation: Covered the practical use of APIs, specifically demonstrating how to connect to the Gemini API using Python.</p>
+        <p>System Architecture: Used flowcharts and graphs to help students visualize data processes and backend logic.</p>
+        <p>Ideation & Prompt Engineering: Led brainstorming sessions and introduced the five key principles of prompt engineering, enabling students to effectively use AI assistants to build out their ideas.</p>
+        <p>By the end of the session, every group successfully troubleshot and debugged their code to present a unique, functional, and thoughtfully constructed website.</p>
+        <h4 class="modal-gallery-title">Girl Scouts Summer Gallery</h4>
+        <div class="modal-gallery-grid">
+            <div class="gallery-item" data-src="./images/GSSummer/gSSummer1.jpeg"><img src="./images/GSSummer/gSSummer1.jpeg" alt="Teaching in HQ"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/GSSummer/GSSummer2.jpeg"><img src="./images/GSSummer/GSSummer2.jpeg" alt="Students learning AI"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/GSSummer/GSSummer3.jpeg"><img src="./images/GSSummer/GSSummer3.jpeg" alt="Presentation"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/GSSummer/GSSummer4.jpeg"><img src="./images/GSSummer/GSSummer2.jpeg" alt="Classroom activity"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/GSSummer/GSSummer5.jpeg"><img src="./images/GSSummer/GSSummer5.jpeg" alt="Students engaged"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+        </div>
+        <span style="font-size: 0.8rem; background: rgba(200,141,255,0.1); color: var(--secondary-lavender); padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(200,141,255,0.2);">Special Thanks to Discovering AI</span>
+
+    </template>
+
+    <template id="modal-CultivatingHope">
+        <h2 id="modal-title">Cultivating Hope Partnership</h2>
+        <span class="modal-year-tag"><i class="fas fa-globe-americas"></i> Girl Scouts of Northern California Headquarters &bull; San Jose, California USA</span>
+        <p>I partnered with the Cultivating Hope Foundation Inc. to design and lead an intensive technology and AI workshop for a select group of high school seniors and college freshmen visiting from Birmingham, Alabama.</p>
+        <p>During this immersion session, I mentored students through the full pipeline of modern web development and AI integration:</p>
+        <p>Programming & AI Fundamentals: Taught core Python programming and introduced foundational artificial intelligence concepts.</p>
+        <p>API Integration: Covered how to connect to and leverage the Gemini API using Python, using flowcharts and pseudocode to make backend logic accessible.</p>
+        <p>Design Thinking & Ideation: Guided students from initial brainstorming to wireframing and designing their website concepts on paper.</p>
+        <p>Prompt Engineering: Introduced the five core principles of prompt engineering, empowering students to utilize AI assistants effectively to build out their platforms.</p>
+        <p>The workshop concluded with a demo day where students presented fully realized, professional websites built from scratch.</p>
+        <h4 class="modal-gallery-title">Cultivating Hope Gallery</h4>
+        <div class="modal-gallery-grid">
+            <div class="gallery-item" data-src="./images/CultivatingHope/CultivatingHope1.jpeg"><img src="./images/CultivatingHope/CultivatingHope1.jpeg" alt="Teaching in HQ"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/CultivatingHope/CultivatingHope2.jpeg"><img src="./images/CultivatingHope/CultivatingHope2.jpeg" alt="Students learning AI"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/CultivatingHope/CultivatingHope3.jpeg"><img src="./images/CultivatingHope/CultivatingHope3.jpeg" alt="Presentation"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/CultivatingHope/CultivatingHope4.jpeg"><img src="./images/CultivatingHope/CultivatingHope4.jpeg" alt="Group Photo"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+        </div>
+    </template>
+
+    <template id="modal-bootcamp">
+        <h2 id="modal-title">AI &amp; Python Bootcamp</h2>
+        <span class="modal-year-tag"><i class="far fa-calendar-alt"></i> July 20–24 &bull; Virtual &bull; Grades 7–10</span>
+
+        <p>At Tech Together Inc., our mission is to empower the next generation of innovators to create positive change through computing and artificial intelligence. </p>
+        <p>This July, we were excited to launch our 5-day AI & Python Bootcamp, designed to introduce middle and high school students to computer science through engaging, project-based learning.</p>
+        
+        <h4 class="modal-gallery-title">What Students Learnt</h4>
+        <ul class="modal-list">
+            <li>Python programming</li>
+            <li>Building and running AI agents</li>
+            <li>Real-world AI applications and use cases</li>
+            <li>Hands-on lab projects each day</li>
+            <li>Introduction to Neural Networks with TensorFlow</li>
+        </ul>
+
+        <blockquote style="border-left: 4px solid var(--secondary-lavender); margin: 1.5rem 0; padding: 0.8rem 1.2rem; background: rgba(200,141,255,0.05); font-style: italic; border-radius: 0 8px 8px 0;">
+            "From hearing the inspiring stories of all the artifacts around the campus to having a delicious lunch, it was an inspiring, motivational and all around fun trip."
+        </blockquote>
+
+        <p>We were also honored to welcome international professors from Women in AI (ECOSOC), discussed how artificial intelligence is driving innovation across climate technology, governance, smart cities, and other real-world applications.</p>
+
+        <h4 class="modal-gallery-title">Guest Speaker Overview</h4>
+        <div class="modal-schedule">
+            <div class="modal-schedule-row"><span class="modal-schedule-day">Day 1</span><span>Guest Speaker: Prof. Yvette Ramos — Climate, Technology & Governance</span></div>
+            <div class="modal-schedule-row"><span class="modal-schedule-day">Day 2</span><span>Guest Speaker: Prof. Lidia — Innovation & Emerging Technologies</span></div>
+            <div class="modal-schedule-row"><span class="modal-schedule-day">Day 3</span><span>Guest Speaker: Prof. Elisabetta — Smart Cities & Technology</span></div>
+        </div>
+        <h4 class="modal-gallery-title">Bootcamp Gallery</h4>
+        <div class="modal-gallery-grid">
+            <div class="gallery-item" data-src="./images/Bootcamp/Bootcamp1.jpg"><img src="./images/Bootcamp/Bootcamp1.jpeg" alt="Day 1 with Prof. Yvette Ramos"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/Bootcamp/Bootcamp2.jpg"><img src="./images/Bootcamp/Bootcamp2.jpeg" alt="Day 2 - Intro to Agentic AI"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+            <div class="gallery-item" data-src="./images/Bootcamp/bootcamp3.jpg"><img src="./images/Bootcamp/bootcamp3.jpeg" alt="Day 3 with Prof. Elisabetta"><div class="gallery-overlay"><i class="fas fa-search-plus"></i></div></div>
+        </div>
+
+        <a href="https://www.youtube.com/channel/UC3Xog-lsYmyunKF_5MIzHpA" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:10px; margin-top: 8px;">Free Course Recordings on Tech Together Youtube Channel <i class="fas fa-arrow-right"></i></a>
+        <a href="https://github.com/ParinazD/BootcampPrograms" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:10px; margin-top: 8px;">Github for Bootcamp Programs <i class="fas fa-arrow-right"></i></a>
+
+    </template>
+
+    <template id="modal-techathon2">
+        <h2 id="modal-title">2nd AI Techathon</h2>
+        <span class="modal-year-tag"><i class="fas fa-map-marker-alt"></i> July 25–26 &bull; UC Berkeley, Soda Hall &bull; Grades 7–10</span>
+
+        <div class="modal-event-banner">
+            <img src="./images/techathonFlyer.png" alt="2nd AI Techathon banner" class="modal-event-banner">
+        </div>
+
+        <p>Join us for two exciting days of innovation, collaboration, and creativity at UC Berkeley! Hosted by Tech Together Inc., the AI Techathon brings together students in Grades 7–10 to design and build AI-powered solutions that address meaningful real-world challenges.</p>
+        <p>Whether you're passionate about computing, sustainability, healthcare, accessibility, or another area of impact, this is your opportunity to turn an idea into a working prototype collaborating with other young innovators. </p>
+        <p>Throughout the weekend, you'll work in teams to develop your project, receive guidance from mentors, and present your solution to a panel of judges from academia and industry.</p>
+
+        <h4 class="modal-gallery-title">What to Expect</h4>
+        <ul class="modal-list">
+            <li>Build an AI-powered solution to a real-world problem</li>
+            <li>Collaborate with a team of fellow students</li>
+            <li>Receive mentorship from university students, researchers, and industry professionals</li>
+            <li>Present your project to experienced judges from academia and industry</li>
+            <li>Compete for exciting prizes, including a Meta campus tour for the winning team (additional prizes to be announced)</li>
+            <li>Breakfast, Lunch, Snacks and Boba are included!</li>
+        </ul>
+
+        <div class="themes-announcement">
+            <div class="themes-announcement-header">
+                <span class="themes-sparkle">✦</span>
+                <h4 class="themes-title">Techathon Themes Announced!</h4>
+                <span class="themes-sparkle">✦</span>
+            </div>
+            <p class="themes-subtitle">Choose your challenge. Build your solution. Make an impact.</p>
+            <ul class="themes-list">
+                <li class="theme-item theme-cities">
+                    <div class="theme-icon-wrap"><i class="fas fa-city"></i></div>
+                    <div class="theme-text">
+                        <span class="theme-name">Smart Cities &amp; Public Good</span>
+                        <span class="theme-desc">Design tech that makes communities safer, smarter, and more connected</span>
+                    </div>
+                </li>
+                <li class="theme-item theme-climate">
+                    <div class="theme-icon-wrap"><i class="fas fa-leaf"></i></div>
+                    <div class="theme-text">
+                        <span class="theme-name">Sustainability &amp; Climate</span>
+                        <span class="theme-desc">Build AI solutions that protect our planet and drive green innovation</span>
+                    </div>
+                </li>
+                <li class="theme-item theme-health">
+                    <div class="theme-icon-wrap"><i class="fas fa-heartbeat"></i></div>
+                    <div class="theme-text">
+                        <span class="theme-name">Healthcare &amp; Well-being</span>
+                        <span class="theme-desc">Create tools that improve health outcomes and empower people</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        
+        <h4 class="modal-gallery-title">Event Schedule</h4>
+        <div class="modal-schedule">
+            <div class="modal-schedule-row"><span class="modal-schedule-day">Day 1</span><span>Team formation, problem scoping, workshops &amp; build time</span></div>
+            <div class="modal-schedule-row"><span class="modal-schedule-day">Day 2</span><span>Final builds, project presentations &amp; awards ceremony</span></div>
+        </div>
+
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScdl1xeqzwaNp6lSyqG7flI4_DkG5ua6hwZ1pD0ysPvt3-4oA/viewform?usp=send_form" target="_blank" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:10px; margin-top: 8px;">Register Now <i class="fas fa-arrow-right"></i></a>
+    </template>
+
+    <section id="get-involved" class="get-involved-section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">Get Involved</h2>
+            <p class="get-involved-lead">Join our community and grow your skills — from competitive coding to aerospace to mentorship.</p>
+            <div class="get-involved-grid">
+
+                <div class="gi-card glass-card">
+                    <div class="card-glow"></div>
+                    <div class="gi-icon-wrap gi-pink"><i class="fas fa-laptop-code"></i></div>
+                    <div class="gi-tag badge-pink">ACSL Team</div>
+                    <h3>ACSL Junior and Senior League</h3>
+                    <p>Compete in the American Computer Science League's Junior division. Perfect for students developing their CS fundamentals and problem-solving skills.</p>
+                    <p>Take on advanced ACSL challenges in the Senior division. Sharpen your algorithms, data structures, and competitive programming skills.</p>
+                    <ul class="gi-meta">
+                        <li><i class="fas fa-graduation-cap"></i> Grades 7–12</li>
+                        <li><i class="fas fa-calendar-alt"></i> Seasonal</li>
+                    </ul>
+                    <a href="https://forms.gle/NnovGycaEYkh77vdA" class="card-btn">Register <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="gi-card glass-card">
+                    <div class="card-glow"></div>
+                    <div class="gi-icon-wrap gi-pink"><i class="fas fa-rocket"></i></div>
+                    <div class="gi-tag badge-pink">Rocketry</div>
+                    <h3>Rocketry Team</h3>
+                    <p>Design, build, and launch model rockets. Explore aerodynamics, propulsion, and engineering through hands-on collaborative projects.</p>
+                    <ul class="gi-meta">
+                        <li><i class="fas fa-graduation-cap"></i> Grades 7–12</li>
+                        <li><i class="fas fa-map-marker-alt"></i> In-person</li>
+                    </ul>
+                    <a href="https://forms.gle/GqPtydBXSrfvVdFQ6" class="card-btn">Register <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="gi-card glass-card">
+                    <div class="card-glow"></div>
+                    <div class="gi-icon-wrap gi-lavender"><i class="fas fa-cube"></i></div>
+                    <div class="gi-tag badge-purple">Maker</div>
+                    <h3>3D Printing Club</h3>
+                    <p>Learn CAD design and bring your ideas to life with 3D printing. Work on real projects from concept sketches to physical prototypes.</p>
+                    <ul class="gi-meta">
+                        <li><i class="fas fa-graduation-cap"></i> Grades 7–12</li>
+                        <li><i class="fas fa-map-marker-alt"></i> In-person</li>
+                    </ul>
+                    <a href="https://forms.gle/2h6KTcfKcSBvgMdb8" class="card-btn btn-highlight">Register <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="gi-card glass-card">
+                    <div class="card-glow"></div>
+                    <div class="gi-icon-wrap gi-lavender"><i class="fas fa-rocket"></i></div>
+                    <div class="gi-tag badge-purple">HerSpark</div>
+                    <h3>Girls Technovation Team</h3>
+                    <p>Design, code, and launch a mobile app to solve real-world problems—working in teams to change the world.</p>
+                    <ul class="gi-meta">
+                        <li><i class="fas fa-graduation-cap"></i> Grades 6–12</li>
+                        <li><i class="fas fa-map-marker-alt"></i>Online and In-person</li>
+                    </ul>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPjcP0x4qNwXBXOPICYOBDx2aWglz-p1E5i9d4YgXIDTaJ4Q/viewform" class="card-btn btn-highlight">Register <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="gi-card glass-card gi-card-wide">
+                    <div class="card-glow"></div>
+                    <div class="gi-mentor-inner">
+                        <div class="gi-mentor-left">
+                            <div class="gi-icon-wrap gi-pink"><i class="fas fa-people-arrows"></i></div>
+                            <div class="gi-tag badge-pink">Mentorship</div>
+                            <h3>Become a Tech Together Mentor</h3>
+                            <p>Share your passion for computing and AI with younger students. As a mentor, you'll guide sessions, support learners, and grow as a leader.</p>
+                            <ul class="gi-meta">
+                                <li><i class="fas fa-graduation-cap"></i> Grades 7–12</li>
+                                <li><i class="fas fa-users"></i> Volunteer-based</li>
+                                <li><i class="fas fa-clock"></i> Flexible hours</li>
+                            </ul>
+                        </div>
+                        <div class="gi-mentor-right">
+                            <div class="gi-mentor-perks">
+                                <span class="gi-perk"><i class="fas fa-check-circle"></i> Leadership experience</span>
+                                <span class="gi-perk"><i class="fas fa-check-circle"></i> Community service hours</span>
+                                <span class="gi-perk"><i class="fas fa-check-circle"></i> Letter of recommendation</span>
+                                <span class="gi-perk"><i class="fas fa-check-circle"></i> Strengthen your own skills</span>
+                            </div>
+                            <a href="https://forms.gle/SPxWNFBmqAQtX8TC6" class="btn btn-primary gi-cta-btn">Sign Up to Mentor <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="nav-logo">
+                    <span class="logo-tech">tech</span><span class="logo-together">together</span>
+                </div>
+                <p>Empowering the next generation through computing and AI.</p>
+            </div>
+            <div class="footer-socials">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/groups/455646047163082" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/groups/13184021/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:dastur.parinaz@gmail.com" aria-label="Email"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2026 Tech Together. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
